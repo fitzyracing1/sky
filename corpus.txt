@@ -1,0 +1,13 @@
+An LLM is a language model. It reads tokens and predicts the next token.
+A decoder-only transformer does this with attention over earlier tokens.
+Attention lets each position look back at the context it already saw.
+The model never looks ahead. That is the causal mask.
+Embeddings turn characters into vectors. Position embeddings mark order.
+Each block has layer norm, multi-head attention, a residual, then a small MLP.
+The head maps the last hidden state to a score for every character.
+Training minimizes cross-entropy between those scores and the true next character.
+Sampling draws the next character from the softened scores, then feeds it back.
+Small models ramble. Larger models and more data make the ramble sharper.
+This nano LLM lives in NumPy. It has no framework and no GPU requirement.
+Repeat the loop: embed, attend, mix, project, sample, append, attend again.
+Language is compression. Prediction is the training signal. Generation is the use.

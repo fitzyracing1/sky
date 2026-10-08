@@ -1,0 +1,230 @@
+{
+  "source": "fitzyracing1/lumen kernel + nano_llm checkpoint",
+  "mission": "Outperform a single-pass assistant on a bounded generation task",
+  "prompt": "An LLM ",
+  "text": "An LLM  lives imPy. It has no framewor the framewos d the next the cext charaw.\nTher m me models I t next ext character from delocks and tamprew.\nThin The mo framewod the next chain mPy.\nTh",
+  "cycles": [
+    {
+      "status": "committed",
+      "chosen": "decompose",
+      "text": "lives imPy. It has no framewor the framewos d the next the cext charaw.\nTher m me models I",
+      "score": 0.907,
+      "realized": 0.344,
+      "critique": "clean",
+      "critiques": [
+        {
+          "name": "direct",
+          "note": "clean",
+          "issues": [],
+          "text": "liSaps the lamapel. anguagers mbles amodels amble. Larger models and thate mble. models ra"
+        },
+        {
+          "name": "decompose",
+          "note": "clean",
+          "issues": [],
+          "text": "lives imPy. It has no framewor the framewos d the next the cext charaw.\nTher m me models I"
+        },
+        {
+          "name": "instrument-first",
+          "note": "clean",
+          "issues": [],
+          "text": "lives in NumPy. It has no framewor d the next character from the softened scores, then fee"
+        }
+      ]
+    },
+    {
+      "status": "committed",
+      "chosen": "decompose",
+      "text": "t next ext character from delocks and tamprew.\nThin The mo framewod the next chain mPy.\nTh",
+      "score": 0.87,
+      "realized": 0.239,
+      "critique": "clean",
+      "critiques": [
+        {
+          "name": "direct",
+          "note": "clean",
+          "issues": [],
+          "text": "t next fthe chararacters int ftom  shextext it already saw.\nThe model never looks ahead. T"
+        },
+        {
+          "name": "decompose",
+          "note": "clean",
+          "issues": [],
+          "text": "t next ext character from delocks and tamprew.\nThin The mo framewod the next chain mPy.\nTh"
+        },
+        {
+          "name": "instrument-first",
+          "note": "clean",
+          "issues": [],
+          "text": "t neLarger d models anduager m, modells reand model. It reands to the next character.\nSamp"
+        }
+      ]
+    },
+    {
+      "status": "withheld",
+      "text": "",
+      "critiques": [
+        {
+          "name": "direct",
+          "note": "wounded",
+          "issues": [
+            "a load-bearing belief is below 0.4"
+          ],
+          "text": "ano mel LLM ivembed mblew. Larger models and more tharacte mble.\nTh models amble. Larger m"
+        },
+        {
+          "name": "decompose",
+          "note": "wounded",
+          "issues": [
+            "a load-bearing belief is below 0.4"
+          ],
+          "text": "ano me del models amble. Larger models and model. That this traten che sto-Poneaion.\nA tie"
+        },
+        {
+          "name": "instrument-first",
+          "note": "wounded",
+          "issues": [
+            "a load-bearing belief is below 0.4"
+          ],
+          "text": "ano LLLM imPy. inguagel models anger modins tarew.\nAthe Psition tion letion each rais fema"
+        }
+      ]
+    }
+  ],
+  "policy_final": {
+    "min_confidence_to_act": 0.55,
+    "max_risk": 0.35000000000000003,
+    "critic_weight": 0.7500000000000001,
+    "revision_budget": 2
+  },
+  "beliefs_final": {
+    "signal": {
+      "claim": "continuation matches the prompt",
+      "confidence": 0.373,
+      "revised": 2
+    },
+    "resources": {
+      "claim": "context budget is finite",
+      "confidence": 0.7,
+      "revised": 0
+    }
+  },
+  "trace": [
+    {
+      "tick": 1,
+      "event": "attack",
+      "detail": "direct -> clean U'=0.636"
+    },
+    {
+      "tick": 1,
+      "event": "simulate",
+      "detail": "direct realized=0.287"
+    },
+    {
+      "tick": 1,
+      "event": "attack",
+      "detail": "decompose -> clean U'=0.786"
+    },
+    {
+      "tick": 1,
+      "event": "simulate",
+      "detail": "decompose realized=0.344"
+    },
+    {
+      "tick": 1,
+      "event": "attack",
+      "detail": "instrument-first -> clean U'=0.758"
+    },
+    {
+      "tick": 1,
+      "event": "simulate",
+      "detail": "instrument-first realized=0.349"
+    },
+    {
+      "tick": 1,
+      "event": "commit",
+      "detail": "decompose"
+    },
+    {
+      "tick": 2,
+      "event": "attack",
+      "detail": "direct -> clean U'=0.636"
+    },
+    {
+      "tick": 2,
+      "event": "simulate",
+      "detail": "direct realized=0.203"
+    },
+    {
+      "tick": 2,
+      "event": "attack",
+      "detail": "decompose -> clean U'=0.786"
+    },
+    {
+      "tick": 2,
+      "event": "simulate",
+      "detail": "decompose realized=0.239"
+    },
+    {
+      "tick": 2,
+      "event": "attack",
+      "detail": "instrument-first -> clean U'=0.758"
+    },
+    {
+      "tick": 2,
+      "event": "simulate",
+      "detail": "instrument-first realized=0.217"
+    },
+    {
+      "tick": 2,
+      "event": "commit",
+      "detail": "decompose"
+    },
+    {
+      "tick": 2,
+      "event": "revise",
+      "detail": "{\"min_confidence_to_act\": 0.55, \"max_risk\": 0.4, \"critic_weight\": 0.7000000000000001, \"revision_budget\": 2}"
+    },
+    {
+      "tick": 3,
+      "event": "attack",
+      "detail": "direct -> wounded U'=0.535"
+    },
+    {
+      "tick": 3,
+      "event": "simulate",
+      "detail": "direct realized=0.126"
+    },
+    {
+      "tick": 3,
+      "event": "attack",
+      "detail": "decompose -> wounded U'=0.668"
+    },
+    {
+      "tick": 3,
+      "event": "simulate",
+      "detail": "decompose realized=0.145"
+    },
+    {
+      "tick": 3,
+      "event": "attack",
+      "detail": "instrument-first -> wounded U'=0.646"
+    },
+    {
+      "tick": 3,
+      "event": "simulate",
+      "detail": "instrument-first realized=0.127"
+    },
+    {
+      "tick": 3,
+      "event": "withhold",
+      "detail": "mean confidence 0.54"
+    },
+    {
+      "tick": 3,
+      "event": "revise",
+      "detail": "{\"min_confidence_to_act\": 0.55, \"max_risk\": 0.35000000000000003, \"critic_weight\": 0.7500000000000001, \"revision_budget\": 2}"
+    }
+  ],
+  "bound": "revision budget 2; no weight update"
+}

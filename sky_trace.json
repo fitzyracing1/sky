@@ -1,0 +1,129 @@
+{
+  "name": "Sky",
+  "repo": "fitzyracing1/sky",
+  "mission": "Carry a bounded job without speaking a plan the critic killed",
+  "layers": [
+    "air",
+    "eat",
+    "win",
+    "talk"
+  ],
+  "steps": [
+    {
+      "job": "An LLM ",
+      "layer": "talk",
+      "status": "committed",
+      "chosen": "decompose",
+      "spoken": "lives imPy. It has no framewor the framewos d the next the cext charaw",
+      "realized": 0.366
+    },
+    {
+      "job": "The robot ",
+      "layer": "talk",
+      "status": "committed",
+      "chosen": "decompose",
+      "spoken": "next character from the softened scores, then feeds it next ich back.",
+      "realized": 0.232
+    },
+    {
+      "job": "Sky withholds ",
+      "layer": "air",
+      "status": "withhold",
+      "spoken": "(silent)"
+    }
+  ],
+  "said": [
+    "lives imPy. It has no framewor the framewos d the next the cext charaw",
+    "next character from the softened scores, then feeds it next ich back.",
+    "(silent)"
+  ],
+  "policy_final": {
+    "min_confidence_to_act": 0.55,
+    "max_risk": 0.45,
+    "critic_weight": 0.65,
+    "revision_budget": 2
+  },
+  "beliefs_final": {
+    "signal": {
+      "claim": "continuation matches the prompt",
+      "confidence": 0.373
+    },
+    "resources": {
+      "claim": "context budget is finite",
+      "confidence": 0.7
+    }
+  },
+  "trace": [
+    {
+      "tick": 1,
+      "event": "attack",
+      "detail": "direct -> clean U'=0.636"
+    },
+    {
+      "tick": 1,
+      "event": "simulate",
+      "detail": "direct realized=0.287"
+    },
+    {
+      "tick": 1,
+      "event": "attack",
+      "detail": "decompose -> clean U'=0.786"
+    },
+    {
+      "tick": 1,
+      "event": "simulate",
+      "detail": "decompose realized=0.366"
+    },
+    {
+      "tick": 1,
+      "event": "attack",
+      "detail": "instrument-first -> clean U'=0.758"
+    },
+    {
+      "tick": 1,
+      "event": "simulate",
+      "detail": "instrument-first realized=0.370"
+    },
+    {
+      "tick": 1,
+      "event": "commit",
+      "detail": "decompose"
+    },
+    {
+      "tick": 2,
+      "event": "attack",
+      "detail": "direct -> clean U'=0.636"
+    },
+    {
+      "tick": 2,
+      "event": "simulate",
+      "detail": "direct realized=0.216"
+    },
+    {
+      "tick": 2,
+      "event": "attack",
+      "detail": "decompose -> clean U'=0.786"
+    },
+    {
+      "tick": 2,
+      "event": "simulate",
+      "detail": "decompose realized=0.232"
+    },
+    {
+      "tick": 2,
+      "event": "attack",
+      "detail": "instrument-first -> clean U'=0.758"
+    },
+    {
+      "tick": 2,
+      "event": "simulate",
+      "detail": "instrument-first realized=0.223"
+    },
+    {
+      "tick": 2,
+      "event": "commit",
+      "detail": "decompose"
+    }
+  ],
+  "bound": "revision budget 2; no weight update"
+}
