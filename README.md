@@ -12,3 +12,8 @@ python3 nano_llm.py sample --prompt "Sky " --n 120
 Weights are `nano_llm.npz`, trained by `python3 nano_llm.py train --steps 600`. The kernel never edits them. Revision budget is 2.
 
 Remote: https://github.com/fitzyracing1/sky
+
+## Documentation
+
+- In-repo docs: [docs/](docs/index.md)
+- Wiki: [https://github.com/fitzyracing1/sky/wiki](https://github.com/fitzyracing1/sky/wiki)
